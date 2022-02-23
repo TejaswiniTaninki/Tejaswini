@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+int tc[100],ntc,i,j,count;
+	
+	scanf("%d",&ntc);
+	
+	for (i=0;i<ntc;i++)
+	scanf("%d",&tc[i]);
+
+	for (i=0;i<ntc;i++){
+		count=0;
+		for (j=0;j<ntc;j++)
+		if (tc[i]!=tc[j] && i!=j)
+		count++;
+		
+		if (count==ntc-1)
+		printf("%d ",tc[i]);
+	}
+	
+	return 0;
+  }
